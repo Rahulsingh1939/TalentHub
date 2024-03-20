@@ -20,6 +20,7 @@ const MONGODB_URL = process.env.MONGODB_URL
 
 //
 const healthRoute = require('./routes/healthRoute')
+const userRoute = require('./routes/userRoute')
 
 //Global MiddleWares
 app.use(bodyparser.urlencoded({extended:true}))
@@ -36,7 +37,8 @@ app.get('/',(req,res)=>{
 })
 
 // ROUTES
-// app.use('/api/v1',)
+app.use('/api/v1/user',userRoute)
+
 app.use('/api/health',healthRoute)
 
 
