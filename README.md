@@ -13,9 +13,13 @@ interviewers.
 
 Evaluation Criteria:
 Effectiveness: How well does the solution address the challenges?
+
 Scalability: Can it handle a large volume of users and job postings?
+
 User Experience: Is the platform intuitive and user-friendly?
+
 Accuracy: How well does it match candidates to suitable roles?
+
 Innovation: Does it incorporate cutting-edge technologies or novel approaches?
 
 
