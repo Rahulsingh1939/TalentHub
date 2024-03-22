@@ -9,11 +9,16 @@ import Login from "./Pages/Login/Login";
 import Signup from "./Pages/Signup/Signup";
 import { Toaster } from "react-hot-toast";
 import { AuthProvider } from "./context/auth";
+import ProtectedRoute from "./Components/ProtectedRoute";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: (
+      <ProtectedRoute>
+        <Home />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "/login",
