@@ -18,13 +18,11 @@ router.post("/add", authMiddleware, isAdminMiddleware, addExamController);
 router.post(
   "/get-all-exams",
   authMiddleware,
-  isAdminMiddleware,
   getAllExamController
 );
 router.post(
   "/get-exam-by-id",
   authMiddleware,
-  isAdminMiddleware,
   getExamByIdController
 );
 router.post(
