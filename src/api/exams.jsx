@@ -1,10 +1,12 @@
 import axiosInstance from ".";
 
 // add exam
-
 export const addExam = async (payload) => {
   try {
-    const response = await axiosInstance.post('/api/exams/add', payload);
+    const response = await axiosInstance.post(
+      `${import.meta.env.VITE_REACT_APP_URL}/exams/add`,
+      payload
+    );
     return response.data;
   } catch (error) {
     return error.response.data;
@@ -14,7 +16,9 @@ export const addExam = async (payload) => {
 // get all exams
 export const getAllExams = async () => {
   try {
-    const response = await axiosInstance.post('http://localhost:3000/api/v1/exams/get-all-exams');
+    const response = await axiosInstance.post(
+      `${import.meta.env.VITE_REACT_APP_URL}/exams/get-all-exams`
+    );
     return response.data;
   } catch (error) {
     return error.response.data;
@@ -26,7 +30,7 @@ export const getAllExams = async () => {
 export const getExamById = async (payload) => {
   try {
     const response = await axiosInstance.post(
-      "/api/exams/get-exam-by-id",
+      `${import.meta.env.VITE_REACT_APP_URL}/exams/get-exam-by-id`,
       payload
     );
     return response.data;
@@ -40,7 +44,7 @@ export const getExamById = async (payload) => {
 export const editExamById = async (payload) => {
   try {
     const response = await axiosInstance.post(
-      "/api/exams/edit-exam-by-id",
+      `${import.meta.env.VITE_REACT_APP_URL}/exams/edit-exam-by-id`,
       payload
     );
     return response.data;
@@ -54,7 +58,7 @@ export const editExamById = async (payload) => {
 export const deleteExamById = async (payload) => {
   try {
     const response = await axiosInstance.post(
-      "/api/exams/delete-exam-by-id",
+      `${import.meta.env.VITE_REACT_APP_URL}/exams/delete-exam-by-id`,
       payload
     );
     return response.data;
@@ -68,7 +72,7 @@ export const deleteExamById = async (payload) => {
 export const addQuestionToExam = async (payload) => {
   try {
     const response = await axiosInstance.post(
-      "/api/exams/add-question-to-exam",
+      `${import.meta.env.VITE_REACT_APP_URL}/exams/add-question-to-exam`,
       payload
     );
     return response.data;
@@ -80,7 +84,7 @@ export const addQuestionToExam = async (payload) => {
 export const editQuestionById = async (payload) => {
   try {
     const response = await axiosInstance.post(
-      "/api/exams/edit-question-in-exam",
+      `${import.meta.env.VITE_REACT_APP_URL}/exams/edit-question-in-exam`,
       payload
     );
     return response.data;
@@ -92,11 +96,11 @@ export const editQuestionById = async (payload) => {
 export const deleteQuestionById = async (payload) => {
   try {
     const response = await axiosInstance.post(
-      "/api/exams/delete-question-in-exam",
+      `${import.meta.env.VITE_REACT_APP_URL}/exams/delete-question-in-exam`,
       payload
     );
     return response.data;
   } catch (error) {
     return error.response.data;
   }
-}
+};
