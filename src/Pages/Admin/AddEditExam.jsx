@@ -177,13 +177,13 @@ function AddEditExam() {
               </Row>
               <div className="flex justify-end gap-2">
                 <button
-                  className="primary-outlined-btn"
+                  className="primary-outlined-btn w-24 rounded-lg"
                   type="button"
                   onClick={() => navigate("/admin/exams")}
                 >
                   Cancel
                 </button>
-                <button className="primary-contained-btn w-24 rounded-lg" type="submit">
+                <button className="primary-contained-btn w-24 rounded-lg bg-blue-600" type="submit">
                   Save
                 </button>
               </div>

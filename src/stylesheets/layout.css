@@ -64,13 +64,12 @@ button {
   height: 40px !important;
 }
 .primary-contained-btn {
-  background-color: var(--primary);
+  background: linear-gradient(to bottom right, #2563eb, #2d9cdb);
   color: white;
 }
 
 .primary-outlined-btn {
-  background-color: white;
-  color: var(--primary);
+
   border: 2px solid var(--primary);
   border-radius: 5px;
 }
