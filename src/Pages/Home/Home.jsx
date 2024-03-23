@@ -36,7 +36,7 @@ function Home() {
         <Row gutter={[16, 16]}>
           {exams.map((exam, index) => (
             <Col span={6} key={index} className="m-6">
-              <div className="card-lg flex flex-col gap-1 p-2">
+              <div className="card card-lg rounded-lg hover:border-2 transition duration-300 flex flex-col gap-1 p-4 text-slate-950">
                 <h1 className="text-2xl">{exam?.name}</h1>
 
                 <h1 className="text-md">Category : {exam.category}</h1>

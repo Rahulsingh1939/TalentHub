@@ -25,7 +25,6 @@ router.post(
 router.post(
   "/get-all-reports-by-user",
   authMiddleware,
-  isAdminMiddleware,
   getUserReportController
 );
 
