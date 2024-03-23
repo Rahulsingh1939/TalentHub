@@ -128,14 +128,14 @@ function ProtectedRoute({ children }) {
   };
 
   return (
-    <div className="layout">
+    <div className="layout ">
       <div className="flex gap-2 w-full h-full h-100">
-        <div className="sidebar">
-          <div className="menu">
+        <div className="sidebar bg-blue-600">
+          <div className="menu ">
             {menu.map((item, index) => {
               return (
                 <div
-                  className={`menu-item ${
+                  className={`menu-item px-6 py-3 m-3 ${
                     getIsActiveOrNot(item.paths) && "active-menu-item"
                   }`}
                   key={index}
@@ -149,7 +149,7 @@ function ProtectedRoute({ children }) {
           </div>
         </div>
         <div className="body">
-          <div className="header flex justify-between">
+          <div className="header flex justify-between ">
             {!collapsed && (
               <i
                 className="ri-close-line"
@@ -162,7 +162,7 @@ function ProtectedRoute({ children }) {
                 onClick={() => setCollapsed(false)}
               ></i>
             )}
-            <h1 className="text-2xl text-white">SHEY QUIZ</h1>
+            <h1 className="text-2xl text-white">TalentHub</h1>
             <div>
               <div className="flex gap-1 items-center">
                 <h1 className="text-md text-white">{user?.name}</h1>

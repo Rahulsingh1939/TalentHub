@@ -1,4 +1,5 @@
 import { Col, message, Row } from "antd";
+import "../../stylesheets/layout.css";
 
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -30,11 +31,11 @@ function Home() {
   return (
     user && (
       <div>
-        <Title title={`Hi ${user.name}, Welcome to SheyQuiz`} />
+        <Title title={`Hi ${user.name}, Welcome to TalentHub`} />
         <div className="divider"></div>
         <Row gutter={[16, 16]}>
-          {exams.map((exam,index) => (
-            <Col span={6} key={index}>
+          {exams.map((exam, index) => (
+            <Col span={6} key={index} className="m-6">
               <div className="card-lg flex flex-col gap-1 p-2">
                 <h1 className="text-2xl">{exam?.name}</h1>
 
