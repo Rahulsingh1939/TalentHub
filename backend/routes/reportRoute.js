@@ -13,7 +13,6 @@ const router = express.Router();
 router.post(
   "/add-report",
   authMiddleware,
-  isAdminMiddleware,
   addReportController
 );
 router.post(

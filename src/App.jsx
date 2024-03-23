@@ -11,6 +11,7 @@ import { Toaster } from "react-hot-toast";
 import { AuthProvider } from "./context/auth";
 import ProtectedRoute from "./Components/ProtectedRoute";
 import UserReports from "./Pages/User/UserReports";
+import WriteExam from "./Pages/User/WriteExam";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,14 @@ const router = createBrowserRouter([
     element:(
       <ProtectedRoute>
         <UserReports />
+      </ProtectedRoute>
+    )
+  },
+  {
+    path:"/user/write-exam/:id",
+    element:(
+      <ProtectedRoute>
+        <WriteExam/>
       </ProtectedRoute>
     )
   },
