@@ -294,7 +294,7 @@ function WriteExam() {
 
             <div className="flex justify-center gap-2">
               <button
-                className="primary-outlined-btn"
+                className="primary-outlined-btn  w-24 rounded-lg"
                 onClick={() => {
                   navigate("/");
                 }}
@@ -302,7 +302,7 @@ function WriteExam() {
                 Close
               </button>
               <button
-                className="primary-contained-btn"
+                className="primary-contained-btn  w-24 rounded-lg"
                 onClick={() => {
                   setView("instructions");
                   setSelectedQuestionIndex(0);

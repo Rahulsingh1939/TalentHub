@@ -12,6 +12,10 @@ import { AuthProvider } from "./context/auth";
 import ProtectedRoute from "./Components/ProtectedRoute";
 import UserReports from "./Pages/User/UserReports";
 import WriteExam from "./Pages/User/WriteExam";
+import Exams from "./Pages/Admin/Exams";
+import AddEditExam from "./Pages/Admin/AddEditExam";
+import AdminReports from "./Pages/Admin/adminReports";
+import AddEditQuestion from "./Pages/Admin/AddEditQuestions";
 
 const router = createBrowserRouter([
   {
@@ -23,20 +27,52 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path:"/user/reports",
-    element:(
+    path: "/user/reports",
+    element: (
       <ProtectedRoute>
         <UserReports />
       </ProtectedRoute>
-    )
+    ),
   },
   {
-    path:"/user/write-exam/:id",
-    element:(
+    path: "/user/write-exam/:id",
+    element: (
       <ProtectedRoute>
-        <WriteExam/>
+        <WriteExam />
       </ProtectedRoute>
-    )
+    ),
+  },
+  {
+    path: "/admin/exams",
+    element: (
+      <ProtectedRoute>
+        <Exams />
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: "/admin/exams/add",
+    element: (
+      <ProtectedRoute>
+        <AddEditExam />
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: "/admin/exams/edit/:id",
+    element: (
+      <ProtectedRoute>
+        <AddEditExam />
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: "/admin/reports",
+    element: (
+      <ProtectedRoute>
+        <AdminReports />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "/login",

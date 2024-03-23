@@ -65,7 +65,7 @@ function UserReports() {
     <div>
       <Title title="Reports" />
       <div className="divider"></div>
-      <Table rowKey={(record, index) => index}  columns={columns} dataSource={reportsData} />
+      <Table rowKey={(record, index) => index} columns={columns} dataSource={reportsData} />
     </div>
   );
 }
