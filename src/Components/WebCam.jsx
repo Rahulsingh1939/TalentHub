@@ -8,7 +8,7 @@ function WebCamera() {
   const [isCameraOpen, setIsCameraOpen] = useState(true);
 
   // Fetch all image files
-  let captureCount = 1;
+  let captureCount = 10;
   const captureImage = () => {
     capture();
     console.log('Image being captured')
@@ -69,7 +69,7 @@ function WebCamera() {
   const cameraAPIStyle = {
     border: "4px solid #d1d1d1",
     borderRadius: "20px",
-    width: "240px",
+    width: "36rem",
   };
   return (
     <Fragment>
