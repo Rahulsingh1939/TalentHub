@@ -1,4 +1,7 @@
 const Report = require("../models/report");
+const Exam = require("../models/exam");
+const User = require("../models/user");
+
 
 const addReportController = async (req, res) => {
   try {
