@@ -36,7 +36,7 @@ app.use(cors());
 // Multer file upload handler
 const fileStorage = multer.diskStorage({
   destination: (req, file, cb) => {
-    const uploadPath = path.join(__dirname, path.join("uploads", "Image"));
+    const uploadPath =  path.join("uploads", "Image");
     // Create the uploads directory if it doesn't exist
     fs.mkdir(uploadPath, { recursive: true }, (err) => {
       if (err) {
