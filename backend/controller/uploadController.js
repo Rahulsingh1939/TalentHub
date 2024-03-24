@@ -22,7 +22,7 @@ const createNewFile = async (req, res) => {
     return res.status(401).send({ message: "User not found", success: false });
   }
   return res
-    .status(200)
+    .status(201)
     .send({ message: "Image Added Successfully", success: true });
 };
 

@@ -1,18 +1,26 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import WebCamera from "../../Components/WebCam";
 
 function Instructions({ examData, setView, startTimer }) {
   const navigate = useNavigate();
   return (
     <div className="flex flex-col items-center gap-5 pt-8">
-        <h1 className="text-3xl text-center font-bold font-serif text-black-300 mb-8">INSTRUCTIONS</h1>
+      <h1 className="text-3xl text-center font-bold font-serif text-black-300 mb-8">
+        INSTRUCTIONS
+      </h1>
+      <WebCamera />
       <ul className="flex flex-col gap-1">
-        <li className="text-xl font-sans">Exam must be completed in {examData.duration} seconds.</li>
+        <li className="text-xl font-sans">
+          Exam must be completed in {examData.duration} seconds.
+        </li>
         <li className="text-xl font-sans">
           Exam will be submitted automatically after {examData.duration}{" "}
           seconds.
         </li>
-        <li className="text-xl font-sans">Once submitted, you cannot change your answers.</li>
+        <li className="text-xl font-sans">
+          Once submitted, you cannot change your answers.
+        </li>
         <li className="text-xl font-sans">Do not refresh the page.</li>
         <li className="text-xl font-sans">
           You can use the <span className="font-bold">"Previous"</span> and{" "}
