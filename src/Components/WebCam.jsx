@@ -8,7 +8,7 @@ function WebCamera() {
   const [isCameraOpen, setIsCameraOpen] = useState(true);
 
   // Fetch all image files
-  let captureCount = 10;
+  let captureCount = 1;
   const captureImage = () => {
     capture();
     console.log('Image being captured')
