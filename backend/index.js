@@ -7,7 +7,10 @@ const multer = require("multer");
 const path = require("path");
 const fs = require("fs");
 
+const { createServer } = require("node:http");
+
 const app = express();
+const server = createServer(app);
 
 const dotenv = require("dotenv");
 dotenv.config();
@@ -16,9 +19,9 @@ connectDB();
 
 //Environmental Variables
 const PORT = process.env.PORT || 3000;
-const MONGODB_URL = process.env.MONGODB_URL;
+const SOCKET_PORT = process.env.SOCKET_PORT || 8080;
 
-//
+//IMPORT ROUTES
 const healthRoute = require("./routes/healthRoute");
 const userRoute = require("./routes/userRoute");
 const examRoute = require("./routes/examRoute");
@@ -26,7 +29,7 @@ const reportRoute = require("./routes/reportRoute");
 const uploadRoute = require("./routes/uploadRoute");
 
 //Global MiddleWares
-app.use(bodyparser.urlencoded({ extended: true }));
+app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 app.use(express.static("public"));
 app.use(cors());
@@ -36,7 +39,7 @@ app.use(cors());
 // Multer file upload handler
 const fileStorage = multer.diskStorage({
   destination: (req, file, cb) => {
-    const uploadPath =  path.join("uploads", "Image");
+    const uploadPath = path.join("uploads", "Image");
     // Create the uploads directory if it doesn't exist
     fs.mkdir(uploadPath, { recursive: true }, (err) => {
       if (err) {
@@ -61,6 +64,56 @@ const fileFilter = (req, file, cb) => {
     cb(null, false); // Reject upload for other MIME types
   }
 };
+
+const io = require("socket.io")(server, {
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"],
+  },
+});
+
+io.on("connection", (socket) => {
+  socket.emit("me", socket.id);
+  // socket.join("me",socket.id);
+  console.log(`User Connected: ${socket.id}`);
+
+  socket.on("callUser", ({ userToCall, signalData, from, name }) => {
+    io.to(userToCall).emit("callUser", {
+      signal: signalData,
+      from,
+      name,
+    });
+  });
+
+  socket.on("updateMyMedia", ({ type, currentMediaStatus }) => {
+    console.log("updateMyMedia");
+    socket.broadcast.emit("updateUserMedia", { type, currentMediaStatus });
+  });
+
+  socket.on("msgUser", ({ name, to, message, sender }) => {
+    io.to(to).emit("msgRcv", { name, message, sender });
+  });
+  socket.on("join_room", (data) => {
+    socket.join(data);
+    console.log(data, "joioned");
+  });
+
+  socket.on("send_message", (data) => {
+    socket.to(data.to).emit("receive_message", data);
+    // console.log('mesg gaya' ,data.message);
+  });
+
+  socket.on("answerCall", (data) => {
+    socket.broadcast.emit("updateUserMedia", {
+      type: data.type,
+      currentMediaStatus: data.myMediaStatus,
+    });
+    io.to(data.to).emit("callAccepted", data);
+  });
+  socket.on("endCall", ({ id }) => {
+    io.to(id).emit("endCall");
+  });
+});
 
 app.get("/", (req, res) => {
   res.json({ status: "Success", message: "Everything Fine" });
@@ -91,3 +144,7 @@ app.listen(PORT, (error) => {
     console.log(`Server Up On ${PORT}`);
   }
 });
+
+server.listen(SOCKET_PORT, () =>
+  console.log(`Server is running on port ${SOCKET_PORT}`)
+);
