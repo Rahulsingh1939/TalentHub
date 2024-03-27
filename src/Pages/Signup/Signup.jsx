@@ -14,7 +14,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:3000/api/v1/user/register",
+        `${import.meta.env.VITE_REACT_APP_URL}/user/register`,
         {
           name,
           email,
