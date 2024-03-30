@@ -1,4 +1,4 @@
-***Executive Summary ***
+Executive Summary 
 TalentHub is a cutting-edge virtual hiring platform designed to revolutionize talent engagement and hiring processes. With a comprehensive suite of features including MCQ assessment, coding problem assessment, live interview sessions with audio-video chat, transcription of interview sessions, integrated code editor, screen sharing, and a sophisticated resume parser, TalentHub offers a seamless and one-stop solution to optimize their recruitment process.
 
 Our platform addresses the core challenges faced by Unstop, focusing on enhancing efficiency, accuracy, and user experience. By integrating advanced Machine Learning Technologies and advanced technologies like WebRTC and P2P, TalentHub ensures effective candidate matching, streamlined evaluation processes, and improved engagement between candidates and employers.
