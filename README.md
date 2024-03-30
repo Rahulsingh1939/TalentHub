@@ -18,17 +18,17 @@ TalentHub's advanced resume parser utilizes natural language processing algorith
 
 ### Register Page
 <div align="center">
-  <img src="/public/Register.png" alt="Register Page" width="600" height="400">
+  <img src="/public/Register.png" alt="Register Page" width="600" height="300">
 </div>
 
 ### Exam
 <div align="center">
-  <img src="/public/Exam.png" alt="Exam" width="600" height="400">
+  <img src="/public/Exam.png" alt="Exam" width="600" height="300">
 </div>
 
 ### Live Interview Session
 <div align="center">
-  <img src="/public/Interview.png" alt="Live Interview Session" width="600" height="400">
+  <img src="/public/Interview.png" alt="Live Interview Session" width="300" height="400">
 </div>
 
 
