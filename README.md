@@ -13,6 +13,11 @@ With integrated audio-video chat, a built-in code editor, and screen share funct
 ### CV/Resume Parser
 TalentHub's advanced resume parser utilizes natural language processing algorithms to extract relevant information from resumes. This ensures accurate candidate matching based on skills, qualifications, and experience, enhancing the efficiency of the hiring process.
 
+![Image Description](./public/Register.png)
+![Image Description](./public/Exam.png)
+![Image Description](./public/Interview.png)
+
+
 ## Future Enhancements
 
 ### Proctoring System with OpenCV
