@@ -15,7 +15,8 @@ import WriteExam from "./Pages/User/WriteExam";
 import Exams from "./Pages/Admin/Exams";
 import AddEditExam from "./Pages/Admin/AddEditExam";
 import AdminReports from "./Pages/Admin/adminReports";
-import AddEditQuestion from "./Pages/Admin/AddEditQuestions";
+import AdminInterview from "./Pages/Admin/AdminInterview";
+import UserInterview from "./Pages/User/UserInterview";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,14 @@ const router = createBrowserRouter([
     element: (
       <ProtectedRoute>
         <WriteExam />
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: "/user/interview",
+    element: (
+      <ProtectedRoute>
+        <UserInterview />
       </ProtectedRoute>
     ),
   },
@@ -71,6 +80,14 @@ const router = createBrowserRouter([
     element: (
       <ProtectedRoute>
         <AdminReports />
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: "/admin/interview",
+    element: (
+      <ProtectedRoute>
+        <AdminInterview />
       </ProtectedRoute>
     ),
   },

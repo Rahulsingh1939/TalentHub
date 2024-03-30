@@ -4,6 +4,7 @@ import { getUserInfo } from "../api/users.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { SetUser } from "../Redux/userSlice.jsx";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 function ProtectedRoute({ children }) {
   const { user } = useSelector((state) => state.users);
@@ -26,6 +27,12 @@ function ProtectedRoute({ children }) {
       onClick: () => navigate("/user/reports"),
     },
     {
+      title: "Interview",
+      paths: ["/user/interview"],
+      icon: <i className="ri-bar-chart-line"></i>,
+      onClick: () => navigate("/user/interview"),
+    },
+    {
       title: "Profile",
       paths: ["/profile"],
       icon: <i className="ri-user-line"></i>,
@@ -36,6 +43,7 @@ function ProtectedRoute({ children }) {
       paths: ["/logout"],
       icon: <i className="ri-logout-box-line"></i>,
       onClick: () => {
+        toast.success("Logged Out successfully")
         localStorage.removeItem("token");
         navigate("/login");
       },
@@ -62,6 +70,12 @@ function ProtectedRoute({ children }) {
       onClick: () => navigate("/admin/reports"),
     },
     {
+      title: "Interview",
+      paths: ["/admin/interview"],
+      icon: <i className="ri-bar-chart-line"></i>,
+      onClick: () => navigate("/user/interview"),
+    },
+    {
       title: "Profile",
       paths: ["/profile"],
       icon: <i className="ri-user-line"></i>,
@@ -72,6 +86,7 @@ function ProtectedRoute({ children }) {
       paths: ["/logout"],
       icon: <i className="ri-logout-box-line"></i>,
       onClick: () => {
+        toast.success("Logged Out successfully")
         localStorage.removeItem("token");
         navigate("/login");
       },
