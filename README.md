@@ -17,13 +17,19 @@ With integrated audio-video chat, a built-in code editor, and screen share funct
 TalentHub's advanced resume parser utilizes natural language processing algorithms to extract relevant information from resumes. This ensures accurate candidate matching based on skills, qualifications, and experience, enhancing the efficiency of the hiring process.
 
 ### Register Page
-<img src="/public/Register.png" alt="Image Description" width="600" height="400">
+<div align="center">
+  <img src="/public/Register.png" alt="Register Page" width="600" height="400">
+</div>
 
 ### Exam
-<img src="/public/Exam.png" alt="Image Description" width="600" height="400">
+<div align="center">
+  <img src="/public/Exam.png" alt="Exam" width="600" height="400">
+</div>
 
 ### Live Interview Session
-<img src="/public/Interview.png" alt="Image Description" width="600" height="400">
+<div align="center">
+  <img src="/public/Interview.png" alt="Live Interview Session" width="600" height="400">
+</div>
 
 
 ## Future Enhancements
