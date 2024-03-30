@@ -5,34 +5,39 @@ TalentHub is a cutting-edge virtual hiring platform designed to revolutionize ta
 ## Key Features
 
 ### MCQ and Coding Assessments
+
 TalentHub provides customizable assessments to evaluate candidates' skills and competencies accurately. Whether it's assessing technical knowledge or problem-solving abilities, our platform offers diverse assessment options tailored to specific job roles.
 
 ### Live Interview Sessions
+
 With integrated audio-video chat, a built-in code editor, and screen share functionality, TalentHub facilitates seamless virtual interview experiences. Candidates can showcase their skills in real time while recruiters can assess candidates' communication, problem-solving, and coding abilities effectively.
 
 ### CV/Resume Parser
+
 TalentHub's advanced resume parser utilizes natural language processing algorithms to extract relevant information from resumes. This ensures accurate candidate matching based on skills, qualifications, and experience, enhancing the efficiency of the hiring process.
 
-![Image Description](<img src="./public/Register.png" alt="Image Description" width="300" height="200">
-)
 ### Register Page
+<img src="/public/Register.png" alt="Image Description" width="300" height="200">
 
-![Image Description](<img src="./public/Exam.png" alt="Image Description" width="300" height="200">)
 ### Exam
+<img src="/public/Exam.png" alt="Image Description" width="300" height="200">
 
-![Image Description](<img src="./public/Interview.png" alt="Image Description" width="300" height="200">)
 ### Live Interview Session
+<img src="/public/Interview.png" alt="Image Description" width="300" height="200">
 
 
 ## Future Enhancements
 
 ### Proctoring System with OpenCV
+
 We aim to integrate a proctoring system for coding and MCQ assessments using the OpenCV computer vision library. This system will leverage facial recognition and motion detection algorithms to monitor candidates during assessments, ensuring the integrity and security of the evaluation process.
 
 ### Transcription of Interview System
+
 TalentHub plans to implement a transcription system for interview sessions, utilizing speech recognition technology to automatically transcribe audio content into text. This feature will enable recruiters to review interview discussions efficiently, extract key insights, and share feedback with colleagues seamlessly.
 
 ### Integrated Whiteboard Feature
+
 This feature will enable candidates and interviewers to sketch diagrams, write code snippets, and solve problems together during live sessions. By offering a virtual whiteboard environment, TalentHub enriches the interactive experience of technical interviews, promoting clearer communication and deeper engagement.
 
 ## Project Benefits
